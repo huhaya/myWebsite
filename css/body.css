@@ -1,0 +1,68 @@
+/* 设置字符编码为UTF-8 */
+@charset "utf-8";
+
+/* 设置body标签的默认样式 */
+body {
+    /* 移除默认的外边距 */
+    margin: 0;
+    /* 移除默认的内边距 */
+    padding: 0;
+    /* 使用背景图像 */
+    background-image: url("../image/background1.png");
+    /* 固定背景图像，使其在滚动时保持不动 */
+    background-attachment: fixed;
+    /* 禁止背景图像重复 */
+    background-repeat: no-repeat;
+    /* 调整背景图像大小以覆盖整个页面 */
+    background-size: cover;
+    /* 居中背景图像 */
+    background-position: center;
+    /* 禁止水平滚动 */
+    overflow-x: hidden;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    /* 设置滚动条宽度 */
+    width: 15px;
+}
+
+/* 设置滚动条滑块的样式 */
+::-webkit-scrollbar-thumb {
+    /* 设置滑块背景颜色 */
+    background: #405c47;
+}
+
+/* 设置滚动条轨道的样式 */
+::-webkit-scrollbar-track {
+    /* 设置轨道背景颜色 */
+    background: #e1ebe4;
+}
+
+/* 设置页脚的样式 */
+.foot {
+    /* 设置上外边距 */
+    margin-top: 0px;
+    /* 设置宽度为视口宽度的100% */
+    width: 100vw;
+    /* 设置高度 */
+    height: 100px;
+    /* 左浮动 */
+    float: left;
+    /* 清除浮动 */
+    clear: both;
+    /* 居中文本 */
+    text-align: center;
+    /* 设置下外边距 */
+    margin-bottom: 0px;
+    /* 设置背景颜色 */
+    background-color: #405c47;
+}
+
+/* 设置页脚中段落文本的样式 */
+.foot p {
+    /* 设置行高 */
+    line-height: 10px;
+    /* 设置文本颜色 */
+    color: rgb(28, 43, 43);
+}

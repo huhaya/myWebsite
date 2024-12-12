@@ -1,0 +1,187 @@
+/* 设置标题图片部分的样式 */
+.titleimg {
+    /* 使用背景图像，并确保它不会重复 */
+    background-image: url("../image/head1.png");
+    /* 设置高度为视口高度的100%，即整个屏幕的高度 */
+    height: 100vh;
+    /* 使用Flexbox布局以居中内容 */
+    display: flex;
+    /* 禁止背景图像重复 */
+    background-repeat: no-repeat;
+    /* 调整背景图像大小以适应容器 */
+    background-size: 1540px;
+    /* 固定背景图像，使其在滚动时保持不动 */
+    background-attachment: fixed;
+    /* 设置宽度为100%以占据整个页面宽度 */
+    width: 100%;
+    /* 添加过渡效果，使变化平滑 */
+    transition: 0.5s ease 0s;
+    /* 应用动画效果，使页面加载时有淡入效果 */
+    animation: load 0.5s;
+}
+
+/* 设置标题内的文本样式 */
+.titleimg .title {
+    /* 使用Flexbox布局以居中内容 */
+    display: flex;
+    /* 设置内边距，调整文本与边缘的距离 */
+    padding: 200px;
+    /* 设置字体大小 */
+    font-size: 100px;
+    /* 居中文本 */
+    text-align: center;
+    /* 加粗字体 */
+    font-weight: bolder;
+    /* 设置文本颜色 */
+    color: #23261e;
+}
+
+/* 设置主内容区域的样式 */
+.main {
+    /* 启用垂直滚动捕捉，使页面滚动时停在每个部分 */
+    scroll-snap-type: y mandatory;
+    /* 允许垂直滚动 */
+    overflow: scroll;
+    /* 禁止水平滚动 */
+    overflow-x: hidden;
+    /* 设置高度为视口高度的100% */
+    height: 100vh;
+}
+
+/* 设置每个部分（section）的样式 */
+.sec {
+    /* 设置高度为视口高度的100% */
+    height: 100vh;
+    /* 设置宽度为视口宽度的100% */
+    width: 100vw;
+    /* 使每个部分在滚动时对齐到顶部 */
+    scroll-snap-align: start;
+}
+
+/* 设置每个项目块的公共样式 */
+.pt {
+    /* 使用Flexbox布局以垂直排列子元素 */
+    display: flex;
+    /* 设置子元素垂直排列 */
+    flex-direction: column;
+    /* 设置高度和宽度 */
+    height: 500px;
+    width: 250px;
+    /* 左浮动，使多个项目块并排显示 */
+    float: left;
+    /* 设置外边距 */
+    margin: 150px 0px 0px 105px;
+    /* 设置背景颜色 */
+    background: #f0f5f1;
+    /* 添加阴影效果 */
+    box-shadow: 0 0 15px rgb(59, 73, 95);
+    /* 设置圆角 */
+    border-radius: 15px;
+    /* 禁止溢出内容显示 */
+    overflow: hidden;
+    /* 使每个部分在滚动时对齐到顶部 */
+    scroll-snap-align: start;
+    /* 添加过渡效果，使变化平滑 */
+    transition: all 0.5s ease 0s;
+}
+
+/* 设置鼠标悬停时的样式 */
+.pt:hover {
+    /* 改变光标样式为指针 */
+    cursor: pointer;
+    /* 缩放项目块 */
+    transform: scale(1.05);
+}
+
+/* 设置隐藏图像容器的样式 */
+.imghid {
+    /* 禁止溢出内容显示 */
+    overflow: hidden;
+}
+
+/* 设置不同项目的背景图像 */
+.part1 .img {
+    background-image: url("../image/homepic1.png");
+}
+.part2 .img {
+    background-image: url("../image/homepic1.png");
+}
+.part3 .img {
+    background-image: url("../image/homepic3.png");
+}
+.part4 .img {
+    background-image: url("../image/homepic4.png");
+}
+
+/* 设置图像的公共样式 */
+.pt .img {
+    /* 设置高度和宽度 */
+    height: 190px;
+    width: 250px;
+    /* 调整背景图像大小以覆盖整个容器 */
+    background-size: cover;
+    /* 调整背景图像位置 */
+    background-position: 0px -30px;
+    /* 添加过渡效果，使变化平滑 */
+    transition: all 0.5s ease 0s;
+    /* 设置透明度 */
+    opacity: 0.8;
+}
+
+/* 设置鼠标悬停时的图像样式 */
+.pt .img:hover {
+    /* 缩放图像 */
+    transform: scale(1.1);
+}
+
+/* 设置文本容器的样式 */
+.pt .txt {
+    /* 设置高度和宽度 */
+    height: 310px;
+    width: 200px;
+    /* 禁止溢出内容显示 */
+    overflow: hidden;
+    /* 使用Flexbox布局以居中内容 */
+    display: flex;
+    /* 垂直排列子元素 */
+    flex-direction: column;
+    /* 水平和垂直居中文本 */
+    margin: auto;
+}
+
+/* 设置标题文本的样式 */
+.pt .txt h1 {
+    /* 居中文本 */
+    text-align: center;
+    /* 设置字体大小 */
+    font-size: 3em;
+    /* 设置文本颜色 */
+    color: #151f18;
+    /* 设置高度和行高 */
+    height: 30px;
+    line-height: 30px;
+}
+
+/* 设置段落文本的样式 */
+.pt .txt p {
+    /* 设置上外边距 */
+    margin-top: -2px;
+    /* 自动换行 */
+    word-wrap: break-word;
+    /* 设置文本颜色 */
+    color: #33633A;
+}
+
+/* 定义加载动画的关键帧 */
+@keyframes load {
+    0% {
+        /* 初始状态：背景图像位置偏移，透明度为0 */
+        background-position-y: 50px;
+        opacity: 0;
+    }
+    100% {
+        /* 最终状态：背景图像位置归位，透明度为1 */
+        background-position-y: 0px;
+        opacity: 1;
+    }
+}

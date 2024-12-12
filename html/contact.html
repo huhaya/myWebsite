@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <style>
+        form {
+            color: #1e2e32;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 80%;
+            padding: 5px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #6a7f70;
+        }
+
+        button {
+            margin-top: 15px;
+            background-color: #65796c;
+            color: #1e2e32;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .tit {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+<nav>
+    <div class="navtitle"><strong>Z</strong>|MY website</div>
+    <a href="home.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="album.html">ALBUM</a>
+    <a href="contact.html">CONTACT</a>
+    <div class="navanim join"></div>
+    <div class="none"></div>
+</nav>
+<div class="mid" id="mid">
+    <div class="contactpart" id="jp">
+        <div class="right">
+            <div class="goal">
+                <div class="container">
+
+                    <div class="tit">Contact me</div>
+                </div>
+                <form id="contactForm">
+                    <label for="name">Name：</label><input type="text" id="name" maxlength="20"><br>
+                    <label for="phone">Number：</label><input type="text" id="phone"><br>
+                    <label for="gender">Gender：</label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select><br>
+                    <label for="message">Message ：</label><br>
+                    <textarea id="message" maxlength="200"></textarea><br>
+                    <input type="button" value="Submit" onclick="submitForm()">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="foot">
+    <p>@2024-2025 | BY:zwx</p>
+    <p>Downwards is the only way backwards .</p>
+</footer>
+<script>
+    function submitForm() {
+        var name = document.getElementById('name').value;
+        var phone = document.getElementById('phone').value;
+        var gender = document.getElementById('gender').value;
+        var message = document.getElementById('message').value;
+
+        // 姓名验证
+        if (name.length < 2 || name.length > 20) {
+            alert('The name should be between 2 and 20 words');
+            return;
+        }
+
+        // 电话验证
+        if (!/^\d{11}$/.test(phone)) {
+            alert('The contact number should be 11 digits');
+            return;
+        }
+
+        // 这里可以添加提交表单数据到服务器的代码，此处仅模拟提交成功
+        alert('提交成功');
+    }
+</script>
+</body>
+
+</html>

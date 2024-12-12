@@ -1,0 +1,155 @@
+/* 设置字符编码为UTF-8 */
+@charset "utf-8";
+
+/* 设置body标签的默认样式 */
+body {
+    /* 移除默认的外边距 */
+    margin: 0;
+    /* 移除默认的内边距 */
+    padding: 0;
+}
+
+/* 设置导航栏的样式 */
+nav {
+    /* 固定定位，使导航栏始终位于页面顶部 */
+    position: fixed;
+    /* 使用Flexbox布局以水平排列子元素 */
+    display: flex;
+    /* 子元素之间均匀分布 */
+    justify-content: space-around;
+    /* 垂直居中对齐子元素 */
+    align-items: center;
+    /* 设置宽度为1540px */
+    width: 1540px;
+    /* 设置高度为70px */
+    height: 70px;
+    /* 设置距离顶部的位置 */
+    top: 0px;
+    /* 设置背景颜色 */
+    background-color: #394b46;
+    /* 禁止溢出内容显示 */
+    overflow: hidden;
+    /* 设置字体大小 */
+    font-size: 20px;
+    /* 设置文本颜色 */
+    color: rgb(234, 247, 255);
+    /* 设置透明度 */
+    opacity: 0.8;
+    /* 设置z-index，确保导航栏在其他内容之上 */
+    z-index: 1000;
+}
+
+/* 设置导航栏的动画效果 */
+.homenav {
+    /* 应用加载动画 */
+    animation: load2 1s linear;
+}
+
+/* 设置鼠标悬停时的样式 */
+nav:hover {
+    /* 改变透明度 */
+    opacity: 0.95;
+}
+
+/* 设置导航栏标题的样式 */
+nav .navtitle {
+    /* 设置左边距 */
+    padding-left: 50px;
+    /* 设置宽度 */
+    width: 30%;
+}
+
+/* 设置导航栏标题中的强文本样式 */
+nav .navtitle strong {
+    /* 设置字体大小 */
+    font-size: 50px;
+    /* 加粗字体 */
+    font-weight: bolder;
+}
+
+/* 设置导航链接的样式 */
+nav a {
+    /* 设置为块级元素 */
+    display: block;
+    /* 使用Flexbox布局以居中内容 */
+    justify-content: center;
+    /* 移除默认的下划线 */
+    text-decoration: none;
+    /* 设置z-index */
+    z-index: 1;
+    /* 设置高度继承自父元素 */
+    height: inherit;
+    /* 设置行高 */
+    line-height: 70px;
+    /* 设置宽度 */
+    width: 120px;
+    /* 右对齐文本 */
+    text-align: right;
+    /* 加粗字体 */
+    font-weight: bolder;
+    /* 设置文本颜色 */
+    color: white;
+    /* 添加过渡效果，使变化平滑 */
+    transition: 0.5s;
+}
+
+/* 设置导航栏动画条的样式 */
+nav .navanim {
+    /* 绝对定位 */
+    position: absolute;
+    /* 设置高度继承自父元素 */
+    height: inherit;
+    /* 设置z-index */
+    z-index: 0;
+    /* 设置背景颜色 */
+    background: #7da97b;
+    /* 设置圆角 */
+    border-radius: 5px;
+    /* 设置左边距 */
+    left: 0px;
+    /* 添加过渡效果，使变化平滑 */
+    transition: all .5s ease 0s;
+    /* 设置宽度 */
+    width: 120px;
+}
+
+/* 设置不同链接悬停时的动画条位置 */
+nav .home, a:nth-child(2):hover ~ .navanim {
+    width: 120px;
+    left: 600px;
+}
+
+nav .about, a:nth-child(3):hover ~ .navanim {
+    width: 120px;
+    left: 755px;
+}
+
+nav .album, a:nth-child(4):hover ~ .navanim {
+    width: 120px;
+    left: 910px;
+}
+
+nav .join, a:nth-child(5):hover ~ .navanim {
+    width: 120px;
+    left: 1063px;
+}
+
+/* 设置空白占位符的样式 */
+nav .none {
+    /* 设置宽度 */
+    width: 20%;
+}
+
+/* 定义导航栏加载动画的关键帧 */
+@keyframes load2 {
+    0% {
+        /* 初始状态：导航栏从上方进入，透明度为0 */
+        top: -80px;
+        opacity: 0;
+    }
+    100% {
+        /* 最终状态：导航栏到达顶部，透明度为0.8 */
+        top: 0px;
+        opacity: 0.8;
+    }
+}
